@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Gift</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="screen-1" class="screen">
+        <div class="loader-content">
+            <img src="https://i.pinimg.com/564x/e5/fc/16/e5fc16af19966da25f358c8d5d16eded.jpg" class="floating-cat">
+            <h1>Merry Christmas 🎅</h1>
+            <p>Loading your winter gift...</p>
+            <div class="progress-bar"><div class="progress"></div></div>
+        </div>
+    </div>
+
+    <div id="screen-2" class="screen hidden">
+        <div class="intro-card bounce-in">
+            <p>a little christmas thought... 🎄</p>
+            <h1>Hey You</h1>
+            <img src="https://media.tenor.com/BPpmIgeq82YAAAAM/christmas-cat.gif" class="intro-cat">
+            <p>I wanted to do a tiny something this Christmas, because you mean a lot to me.</p>
+            <button class="main-btn" onclick="nextScreen(3)">Open Your Gift →</button>
+        </div>
+    </div>
+
+    <div id="screen-3" class="screen hidden">
+        <p class="pink-text">A quick game first...</p>
+        <div class="grid bounce-in">
+            <div class="cell">🍫</div><div class="cell">🍬</div><div class="cell">🍭</div>
+            <div class="cell">🍩</div><div class="cell placeholder" onclick="nextScreen(4)">?</div><div class="cell">🧁</div>
+            <div class="cell">🍫</div><div class="cell">🍬</div><div class="cell">🍭</div>
+        </div>
+        <p class="footer-msg">PLACE THE COOKIE TO CONTINUE</p>
+    </div>
+
+    <div id="screen-4" class="screen hidden">
+        <p>Wrapped straight from my heart</p>
+        <h2>A Christmas Note 🎅✉️</h2>
+        <div class="envelope-wrapper" onclick="nextScreen(5)">
+            <div class="envelope">
+                <div class="heart">❤️</div>
+            </div>
+            <p>Tap to unwrap 🎁</p>
+        </div>
+    </div>
+
+    <div id="screen-5" class="screen hidden">
+        <div class="card slide-up">
+            <div class="badge">MY SWEETEST LOVE</div>
+            <h1>Hey Rashmi,</h1>
+            <p>Christmas feels warmer because of you.</p>
+            <p>You bring comfort, light, and calm into my world.</p>
+            <p>and the things i badly on this christmas is you and cuddles</p>
+            <p>you and cozy date nights</p>
+            <p>you and netflix and chill</p>
+            <p>you and non negotiable</p>
+            <h2 class="signature">Always yours</h2>
+            <button class="main-btn" onclick="nextScreen(6)">Continue ✨</button>
+        </div>
+    </div>
+
+    <div id="screen-6" class="screen hidden">
+        <div class="music-card slide-up">
+            <h3 id="song-title">Adhoora</h3>
+            <audio id="myAudio"></audio>
+            <div class="controls">
+                <button onclick="prevSong()">⏮</button>
+                <button id="playBtn" onclick="togglePlay()">▶ Play</button>
+                <button onclick="nextSong()">⏭</button>
+            </div>
+            <button class="main-btn" onclick="nextScreen(7)">One More Thing...</button>
+        </div>
+    </div>
+
+    <div id="screen-7" class="screen hidden">
+        <div class="final-card slide-up">
+            <h3>Final Thoughts</h3>
+            <p>This Christmas, I just want you to know how much you mean to me.</p>
+            <button class="main-btn" onclick="nextScreen(8)">Seal With Love 💌</button>
+        </div>
+    </div>
+
+    <div id="screen-8" class="screen hidden">
+        <div class="sealed-content bounce-in">
+            <div class="big-heart">💖</div>
+            <h1>Sealed With Love</h1>
+            <p>You Matter To Me</p>
+            <div class="date-box">
+                <p>Always & Forever</p>
+                <p>Thursday, 25 December 2025</p>
+            </div>
+            <button class="main-btn" onclick="location.reload()">See Again ✨</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
